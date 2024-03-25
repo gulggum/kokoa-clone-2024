@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends - KoKoa Clone</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/73deddf0a6.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+      <i class="fa-solid fa-lock"></i>
+      <span>11%</span>
+      <i class="fa-solid fa-battery-full"></i>
+      <i class="fa-solid fa-bolt"></i>
+    </div>
+      </div>
+
+      <header class="screen-header">
+        <h1 class="screen-header__title">Friends</h1>
+        <div class="scree-header__icons">
+            <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+            <span><i class="fa-solid fa-music fa-lg"></i></span>
+            <span><i class="fas fa-cog fa-lg"></i></span>
+        </div>
+      </header>
+
+      <a href="#" id="friend-display-link">
+        <i class="fa-solid fa-circle-info"></i>Friends' Names Display <i class="fa-solid fa-chevron-right fa-xs"></i>
+      </a>
+
+<!-- ┌> 큰상자를 하나 만들어 header랑 같은 간격만큼 들어가게 적용! -->
+      <main class="main-screen">
+
+         <!-- ┌> 사진과 텍스트라인 (동일한곳에 반복해서 사용)
+         /* user-component는 2개의  column을 가진 div */-->
+      <div class="user-component">
+        <div class="user-component__column">
+            <img src="images/gaon.png" alt="" class="user-component__avatar user-component__avatar--xl">
+            <!-- ㄴ> 맨뒤에 사이즈변경을위해 user-component__avatar--xl로 클래스명을 지어줌 
+                    맨뒤에 사이즈값을 붙여서 바로 적용시킬수 있으나 
+                    나중에 채팅페이지나 다른곳에서 쓰일 _avatar가 전부 고정된사이즈값으로 변경되니
+                    따로 클래스를 넣어줌 /해당 페이지마다 css값으로 크기 만들어주는게 좋다 -->
+
+            <div class="user-component__text">
+                <h4 class="user-component__title">Gaoni ♡</h4>
+                <!-- <h6 class="user-component__subtitle">this text whatever</h6> -->
+                    <!-- ㄴ>>나중에 필요할때 사용하기!!!서브타이틀 -->
+            </div>
+        </div>
+    </div>
+
+
+      <div class="friends-screen__channel">
+        <div class="friends-screen__channel-header">
+            <span>Channel</span>
+            <i class="fa-solid fa-chevron-up fa-xs"></i>
+                                       <!--ㄴ>아이콘 방향 바꿔줄수있음!! up,right,left.....-->
+        
+        </div>
+    </div>
+                <!-- ┌> 위에 user-compoments에서 붙여넣기한것 (비슷한페이지를 이렇게 사용할수있다) -->
+                <div class="user-component">
+            <div class="user-component__column">
+                <img src="images/gaon.png" alt="" class="user-component__avatar user-component__avatar--sm">
+    
+                <div class="user-component__text">
+                    <h4 class="user-component__title user-component__title--not-bold">Channel</h4>
+                    <!-- <h6 class="user-component__subtitle">this text whatever</h6> -->
+                        <!-- ㄴ>>나중에 필요할때 사용하기!!!서브타이틀 -->
+                    </div>
+                </div>
+                    <div class="user-compoment__column">
+                        <span>2</span>
+                        <i class="fa-solid fa-chevron-right fa-xs"></i>
+                    </div>
+                  </div>
+      </main>
+      
+      <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn"><a href="friends.html" class="nav__link"><i class="fa-solid fa-user fa-2x"></i></a></li>
+            <li class="nav__btn"><a href="chats.html" class="nav__link">
+               <span class="nav__notification badge">1</span>  <i class="fa-regular fa-comment fa-2x"></i></a></li>
+            <li class="nav__btn"><a href="find.html" class="nav__link"><i class="fa-solid fa-magnifying-glass fa-2x"></i></a></li>
+            <li class="nav__btn"><a href="more.html" class="nav__link">
+               <div class="nav__newalarm"></div> <i class="fa-solid fa-ellipsis fa-2x"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- 애니메이션 적용 -->
+    <div id="splash-screen">
+      <i class="fa-solid fa-comment fa-3x"></i
+          ></div>
+
+    <div id="no-mobile">
+    
+  </body>
+</html>

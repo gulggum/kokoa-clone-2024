@@ -1,0 +1,237 @@
+#chat-screen {
+  background-color: #abc1d1;
+  height: 11000vh;
+}
+#chat-screen .status-bar,
+#chat-screen .alt-header {
+  top: 0;
+  position: fixed;
+  /* css가 흐틀어지면  width값 100% 적용 */
+  width: 100%;
+  /* 보이는 화면에서 넘어가게 위치가되면 box-sizing적용 */
+  box-sizing: border-box;
+  background-color: #abc1d1;
+  /* ㄴ>대화창 텍스트들이 스크롤바 올리면 가려질수있게 하기위해 해더에 배경색적용 */
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.main-chat {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s linear;
+}
+
+#chat-screen .status-bar {
+  z-index: 2;
+}
+#chat-screen .alt-header {
+  z-index: 1;
+}
+
+.chats__timestamp {
+  /* margin-top: 100px; */
+  color: white;
+  background-color: #92a4b2;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 45px;
+  height: 45px;
+  border-radius: 20px;
+  margin-right: 13px;
+}
+
+.message__author {
+  opacity: 0.8;
+  font-size: 15px;
+  margin-bottom: 9px;
+  display: block;
+  /* ㄴ>span이니 블럭으로 만들어준후 마진적용 */
+}
+
+@keyframes send {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes recive {
+  form {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.message-row .message__info {
+  width: 100%;
+  display: flex;
+  transform: translateX(-50vw);
+  /* ㄴ>화면밖으로 이동시켜주기 위해 값적용 */
+  animation: send 1s linear forwards;
+}
+
+.message-row--own .message__info {
+  width: 100%;
+  /* display: flex; */
+  transform: translateX(50vw);
+  animation: recive 1s linear forwards;
+  animation-delay: 0.8s;
+}
+
+.message__info {
+  /* display: flex; */
+  align-items: flex-end;
+  /* ㄴ>플렉스한애들 아래쪽에 정렬 */
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 10px;
+  margin-left: 5px;
+}
+
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+  box-sizing: border-box;
+
+  transition: all 0.3s ease-in-out;
+}
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.reply input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 30px;
+  border: var(--main-border);
+  margin-right: 5px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 10px;
+}
+.reply__column:last-child > i {
+  right: 50px;
+  margin-right: 10px;
+}
+.reply__column:first-child > i,
+.reply__column:last-child > i {
+  color: var(--font-color);
+}
+
+.reply__column:first-child > i {
+  margin-left: -5px;
+}
+button {
+  border-radius: 50px;
+  border: none;
+  background-color: var(--yellow);
+  width: 35px;
+  height: 35px;
+  margin-right: -1px;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+
+/* .reply:focus-within .reply__column:first-child {
+  opacity: 0;
+  visibility: hiddens;
+} */
+
+.reply .reply__column:first-child,
+.reply .reply__column .fa-face-smile,
+.reply button {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ┌ > reply 내부에 포커스가된 element가 있는지 보는것 
+       focus-within하고 다음차례 적용  */
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-smile,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 95vw;
+  transform: translateX(-13%) translateY(-80px);
+  /* ㄴ>위에 feply-column에서 width 값10% 확인후 정렬할값 
+        적용시켜주면 왼쪽으로 애니메이트 */
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
+}

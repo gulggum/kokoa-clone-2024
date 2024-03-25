@@ -1,0 +1,65 @@
+/* user-component는 2개의  column을 가진 div */
+.user-component {
+  justify-content: space-between;
+}
+
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  /* 텍스트가 이미지 옆으로 오게 정렬함 */
+  align-items: center;
+}
+
+/* 뒤에서쓸 기본적인 사이즈 만들어논것 */
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+.user-component__title {
+  font-weight: 600;
+  font-size: 22px;
+  color: #333;
+}
+
+/*  다른페이지에서 사용할수있으니 미리 만들어놓는다 동일한 작업시 편리 */
+.user-component__subtitle {
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+}
+
+.user-component__subtitle i {
+  color: tomato;
+}
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+.user-component__title--not-bold {
+  font-weight: 400;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.user-component__time {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.user-component__clock {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}

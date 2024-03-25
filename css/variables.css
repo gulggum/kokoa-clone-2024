@@ -1,0 +1,9 @@
+:root {
+  --yellow: #fae100;
+  --horizontal-space: 25px;
+  /* 전체창 왼쪽 마진이든 패딩이등 너비 통일시키시위해 variable 적용
+       screen-header.css에 screen-header에 해당변수 적용 */
+
+  --main-border: 1px solid rgba(0, 0, 0, 0.1);
+  --font-color: rgba(0, 0, 0, 0.5);
+}

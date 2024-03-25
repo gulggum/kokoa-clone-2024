@@ -1,0 +1,135 @@
+.recommended-friends {
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+  margin: 25px 0px;
+  padding: 25px 0px;
+}
+
+.recommended-friends__title {
+  font-size: 15px;
+  color: var(--font-color);
+  margin-bottom: 20px;
+}
+
+.recommended-friends span {
+  color: var(--font-color);
+  margin: 100px 0;
+  /* ㄴ>적용이안됨 span 은 인라인이기때문에 block으로 만들어줘야함! */
+  display: block;
+  text-align: center;
+  font-size: 18px;
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--font-color);
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+
+.open-chat__header span {
+  opacity: 0.5;
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.open-post__title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.open-post__hashtags {
+  color: var(--font-color);
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.open-post__members {
+  display: flex;
+  align-items: center;
+}
+
+.open-post__members img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.open-post__member-count {
+  color: var(--font-color);
+  margin-right: 5px;
+}
+
+/* 코드상에 또 다른 divider가 있을수도 있기때문에 이렇게 작성! */
+.open-post__members .divider {
+  width: 1px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.open-post__member-status {
+  color: #ff70c5;
+}
+
+.open-post__photo {
+  position: relative;
+}
+
+.open-post__photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+@keyframes hearthBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: hearthBeat 1s linear infinite;
+}
+
+.open-post__heart-count {
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  border-radius: 40px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.open-post__heart-count span {
+  margin-left: 5px;
+}
+.open-post__centerline {
+  width: 100%;
+  height: 0.000001px;
+  border: var(--main-border);
+  margin: 10px 0px;
+}

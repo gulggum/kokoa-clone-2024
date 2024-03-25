@@ -1,0 +1,56 @@
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+  padding: 15px 5px;
+}
+
+/* input box 전체수정 */
+#login-form input {
+  padding: 15px 0px;
+  border: none;
+  font-size: 18px;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.3); */
+  margin-bottom: 25px;
+  /* input에 멋진 transition 색이 서서히 적용 */
+  /* transition: border-color 0.3s ease-in-out; */
+}
+
+/* :not() 이것을 제외한 나머지에 적용
+   ->input type이 submit이 아닐때에만 적용 */
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s ease-in-out;
+  /* 주의)위 #login-form input 에선 제외해줘야한다 
+    똑같이 쓰게되면 중복적용되어서 효과가 발생 x */
+}
+
+/* input안에 텍스트 수정 */
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* input클릭시 꾸며주기 적용태그에 focus적용
+  ->이프로젝트 전체에 적용시키려면 css초기화 reset 파일 맨아래에 적어준다 */
+
+/* 외부에서 컬러 가져와 사용할 경우 
+     ㄴ> variables.css에 root만들어 사용  */
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  /* ㄴ>마우스올렸을때 포인트 손가락으로 변경 */
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  /* ㄴ> inherit(상속) : a가 색상을 부모로부터 상속받아 오는것 default색은 black */
+  font-size: 13px;
+}

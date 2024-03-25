@@ -1,0 +1,8 @@
+.screen-header__icons i {
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.user-component__column .badge {
+  margin-left: 15px;
+}

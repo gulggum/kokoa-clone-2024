@@ -1,0 +1,56 @@
+#friend-display-link {
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+  padding: 15px 0px;
+  font-size: 18px;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: -25px;
+}
+
+#friend-display-link i {
+  color: rgba(0, 0, 0, 0.3);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /* ㄴ>애니메이션의 마지막 값을 계속 가지고 있고 싶을때
+    투명하게만하지 보이지않을뿐 그자리에 남아있어서 완전히 숨기고 싶을때! */
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  animation: hideSplashScreen 0.2s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
