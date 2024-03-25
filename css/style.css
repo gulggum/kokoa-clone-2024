@@ -24,26 +24,38 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  height: 110vh;
+  height: 100vh;
   /* ㄴ>스크롤 작동시 고정여부 확인시 적용시켜서 확인! */
   color: #2e363e;
-  height: 1000vh;
 }
 
 .welcome-header {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
 }
 
+.welcome-header-fixed {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .welcome-header__title {
   font-size: 25px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: bold;
+  margin-top: 50px;
 }
 
 .welcome-header__text {
-  width: 53%;
+  width: 70%;
+  text-align: center;
   opacity: 0.7;
+  font-size: 15px;
+  margin-bottom: 50px;
 }
 
 .main-screen {
