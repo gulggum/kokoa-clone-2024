@@ -19,7 +19,7 @@
 /* :not() 이것을 제외한 나머지에 적용
    ->input type이 submit이 아닐때에만 적용 */
 #login-form input:not([type="submit"]) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   transition: border-color 0.3s ease-in-out;
   /* 주의)위 #login-form input 에선 제외해줘야한다 
     똑같이 쓰게되면 중복적용되어서 효과가 발생 x */

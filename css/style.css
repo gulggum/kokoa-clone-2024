@@ -53,7 +53,7 @@ body {
 .welcome-header__text {
   width: 70%;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.7.5;
   font-size: 15px;
   margin-bottom: 50px;
 }
